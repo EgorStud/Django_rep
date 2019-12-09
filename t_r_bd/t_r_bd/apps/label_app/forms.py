@@ -12,9 +12,9 @@ from django import forms
 
 
 class User_login(forms.Form):
-	user_type : forms.ChoiceField(choices = ((1,"User"), (2,"Manager")))
-	login: forms.CharField(max_length = 15)
-	password: forms.CharField(max_length = 15)
+	user_type = forms.ChoiceField(choices = ((1,"User"), (2,"Manager")))
+	login = forms.CharField(max_length = 15)
+	password = forms.CharField(max_length = 15)
 
 	def clean_data(self):
 		login = self.cleaned_data['login']
